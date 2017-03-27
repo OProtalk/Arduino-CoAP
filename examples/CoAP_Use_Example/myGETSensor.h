@@ -1,7 +1,5 @@
 #include <coapSensor.h>
 
-
-
 class myGETSensor : 
 public CoapSensor 
 {
@@ -15,9 +13,9 @@ public:
   }
   void get_value( uint8_t* output_data, size_t* output_data_len)
   {
-
     *output_data_len = sprintf( (char*)output_data, "%d", this->status ); 
   }
+
   void check(void)
   {
     static unsigned long timestamp = 0;
